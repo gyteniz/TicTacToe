@@ -22,15 +22,15 @@ class Atvaizdavimas:
         lang9 = 9
 
         print('%s' % (9 * '.     '))
-        print('.%s|%s|%s.' % (str(lang1).center(15), str(lang2).center(15), str(lang3).center(15)))
+        print('.%s|%s|%s.' % (str(lang1).rjust(15), str(lang2).rjust(15), str(lang3).rjust(15)))
         print('%s|%s|%s' % ((16 * " "), (15 * " "), (16 * " ")))
         print('%s|%s|%s' % ((16 * " "), (15 * " "), (16 * " ")))
         print('%s' % (49 * '_'))
-        print('.%s|%s|%s.' % (str(lang4).center(15), str(lang5).center(15), str(lang6).center(15)))
+        print('.%s|%s|%s.' % (str(lang4).rjust(15), str(lang5).rjust(15), str(lang6).rjust(15)))
         print('%s|%s|%s' % ((16 * " "), (15 * " "), (16 * " ")))
         print('%s|%s|%s' % ((16 * " "), (15 * " "), (16 * " ")))
         print('%s' % (49 * '_'))
-        print('.%s|%s|%s.' % (str(lang7).center(15), str(lang8).center(15), str(lang9).center(15)))
+        print('.%s|%s|%s.' % (str(lang7).rjust(15), str(lang8).rjust(15), str(lang9).rjust(15)))
         print('%s|%s|%s' % ((16 * " "), (15 * " "), (16 * " ")))
         print('%s|%s|%s' % ((16 * " "), (15 * " "), (16 * " ")))
         print('%s' % (9 * '.     '))
