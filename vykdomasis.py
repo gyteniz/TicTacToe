@@ -1,51 +1,32 @@
 from laimejimas import Laimejimas
 from lentele import Atvaizdavimas
 
-galimi = {1,2,3,4,5,6,7,8,9}
-kombinacija1 = Laimejimas()
-kombinacija2 = Laimejimas()
-vaizdas = Atvaizdavimas()
-vaizdas.groteles(0, " ")
 
 def ivedimas():
-    while True:
+    while galimi:
         try:
             zingsnis = int(input("Iveskite lenteles pozicijos skaiciu:\t\t"))
-            galimi_ejimai(zingsnis)
-            return zingsnis
-            break
+            if zingsnis < 1 or zingsnis > 9:
+                print("Proshalinis ivedimas")
+            elif zingsnis not in galimi:
+                print("Langelis uzimtas")
+            else:
+
+                galimi.discard(zingsnis)
+                return zingsnis
+
         except ValueError:
-            print("Įvedėte ne skaičių. Bandykite dar kartą")
+            print("Kreivi pirstai ivede ne skaiciu")
 
-
-
-def galimi_ejimai(zingsnis):
-    # zingsnis =ivedimas()
-    # galimi = {"1","2","3","4","5","6","7","8","9"}
-    # galimi = {1,2,3,4,5,6,7,8,9}
-    if len(galimi)<1:
-        print("game over")
-
-    elif zingsnis in galimi:
-        galimi.discard(zingsnis)
-        print(galimi)
-        return zingsnis
-
-
-    else:
-        print("Sis langelis jau uzimtas")
 
 def zymejimas(number):
     if number == 1:
-        zyme = "X"
+        return "X"
+    else:
+        return "0"
 
-    elif number == 2:
-        zyme = "O"
-    return zyme
 
 def laimejimo_patikrinimas(zaidejas, skaicius):
-
-
     if zaidejas == 1:
         # ivediniai.append(skaicius)
         match skaicius:
@@ -97,32 +78,42 @@ def laimejimo_patikrinimas(zaidejas, skaicius):
         return zaidejas
 
 
+def zaisti():
+
+    while True:
+        # galimi = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+        print("Pirmo zaidejo ejimas")
+        sk = ivedimas()
+
+        zyme = zymejimas(1)
+        vaizdas.groteles(sk, zyme)
+
+        laimejimo_patikrinimas(1, sk)
+        if kombinacija1.gauti_rezultata() == True:
+            vaizdas.pirmas_laimejo()
+            break
+        if vaizdas.nuspalvinta():
+            vaizdas.lygiosios()
+            break
+
+        print("Antro zaidejo ejimas")
+        sk = ivedimas()
+        zyme = zymejimas(2)
+        vaizdas.groteles(sk, zyme)
+
+        laimejimo_patikrinimas(2, sk)
+        if kombinacija2.gauti_rezultata() == True:
+            vaizdas.antras_laimejo()
+            break
+
+        if vaizdas.nuspalvinta():
+            vaizdas.lygiosios()
+            break
 
 
-
-
-while True:
-
-    print("Pirmo zaidejo ejimas")
-    sk = ivedimas()
-    zyme = zymejimas(1)
-    vaizdas.groteles(sk, zyme)
-
-    laimejimo_patikrinimas(1, sk)
-    if kombinacija1.gauti_rezultata() == True:
-        print("Laimejo pirmas zaidejas")
-        break
-    # if vaizdas.nuspalvinta():
-    #     print("Lygiosios")
-
-    print("Antro zaidejo ejimas")
-    sk = ivedimas()
-    zyme = zymejimas(2)
-    vaizdas.groteles(sk, zyme)
-
-    laimejimo_patikrinimas(2, sk)
-    if kombinacija1.gauti_rezultata() == True:
-        print("Laimejo antras zaidejas")
-        break
-    # if vaizdas.nuspalvinta():
-    #     print("Lygiosios")
+kombinacija1 = Laimejimas()
+kombinacija2 = Laimejimas()
+vaizdas = Atvaizdavimas()
+vaizdas.groteles(0, " ")
+galimi = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+zaisti()

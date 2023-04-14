@@ -11,43 +11,35 @@ class Laimejimas:
         self.sk8 = sk8
         self.sk9 = sk9
 
-
     def gauti_rezultata(self):
-        # self.skaiciai = [self.sk1, self.sk2, self.sk3, self.sk4, self.sk5, self.sk6, self.sk7, self.sk8, self.sk9]
         if self.sk1 & self.sk2 & self.sk3 == True:
-            self.laimejimas_print()
+            # self.laimejimas_print()
             return True
         elif self.sk4 & self.sk5 & self.sk6 == True:
-            # print("riebalas2")
-            self.laimejimas_print()
+            # self.laimejimas_print()
             return True
         elif self.sk7 & self.sk8 & self.sk9 == True:
-            # print("riebalas3")
-            self.laimejimas_print()
+            # self.laimejimas_print()
             return True
         elif self.sk1 & self.sk4 & self.sk7 == True:
-            # print("riebalas4")
-            self.laimejimas_print()
+            # self.laimejimas_print()
             return True
         elif self.sk2 & self.sk5 & self.sk8 == True:
-            # print("riebalas5")
-            self.laimejimas_print()
+            # self.laimejimas_print()
             return True
         elif self.sk3 & self.sk6 & self.sk9 == True:
-            # print("riebalas6")
-            self.laimejimas_print()
+            # self.laimejimas_print()
             return True
         elif self.sk1 & self.sk5 & self.sk9 == True:
-            # print("riebalas7")
-            self.laimejimas_print()
+            # self.laimejimas_print()
             return True
         elif self.sk3 & self.sk5 & self.sk7 == True:
-            # print("riebalas8")
-            self.laimejimas_print()
+            # self.laimejimas_print()
             return True
         else:
             False
 
     def laimejimas_print(self):
         print("LAIMEJIMAS")
+
 
