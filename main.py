@@ -15,8 +15,9 @@ kombinacija2 = Laimejimas()
 ivediniai = []
 
 while True:
-    zaisti1 = input("PIRMAS ZAIDEJAS:\t\t")
-    while zaisti1 not in ivediniai:
+    # zaisti1 = input("PIRMAS ZAIDEJAS:\t\t")
+
+    if zaisti1 not in ivediniai:
         ivediniai.append(zaisti1)
         match zaisti1:
             case 1:
@@ -37,9 +38,7 @@ while True:
                 kombinacija1.sk8 = True
             case 9:
                 kombinacija1.sk9 = True
-    else:
-        zaisti1 = input("PIRMAS ZAIDEJAS:\t\t")
-        ivediniai.append(zaisti1)
+
     kombinacija1.gauti_rezultata()
     print(ivediniai)
     zaisti2 = input("ANTRAS ZAIDEJAS:\t\t")
@@ -64,8 +63,6 @@ while True:
                 kombinacija2.sk8 = True
             case 9:
                 kombinacija2.sk9 = True
-    else:
-        zaisti2 = input("ANTRAS ZAIDEJAS:\t\t")
-        ivediniai.append(zaisti2)
+
     kombinacija2.gauti_rezultata()
     print(ivediniai)
