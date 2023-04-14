@@ -39,7 +39,7 @@ class Laimejimas:
         else:
             False
 
-    def laimejimas_print(self):
-        print("LAIMEJIMAS")
+    # def laimejimas_print(self):
+    #     print("LAIMEJIMAS")
 
 

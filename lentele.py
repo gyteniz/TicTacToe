@@ -50,7 +50,6 @@ class Atvaizdavimas:
         print('                                                           _/ |             ')
         print('                                                          |__/              ')
 
-
     def antras_laimejo(self):
         print("                _                   _       _             _  _       _ _ _  ")
         print("    /\         | |                 | |     (_)           (_)(_)     | | | | ")
@@ -60,5 +59,3 @@ class Atvaizdavimas:
         print("/_/    \_\_| |_|\__|_|  \__,_|___/ |_|\__,_|_|_| |_| |_|\___| |\___/(_|_|_) ")
         print("                                                           _/ |             ")
         print("                                                          |__/              ")
-# vaizdas=Atvaizdavimas()
-# vaizdas.groteles()

@@ -79,7 +79,6 @@ def laimejimo_patikrinimas(zaidejas, skaicius):
 
 
 def zaisti():
-
     while True:
         # galimi = {1, 2, 3, 4, 5, 6, 7, 8, 9}
         print("Pirmo zaidejo ejimas")
